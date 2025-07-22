@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingViz - Network Latency Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🌐 PingViz!</h1>
+        <p>Interactive Dashboard</p>
+    </div>
+
+    <div class="container">
+        <div class="controls">
+            <button class="btn btn-primary" onclick="pingAllServers()">
+                🍴 Ping All Servers
+            </button>
+            <button class="btn btn-secondary" onclick="toggleAutoRefresh()">
+                🔄 Auto Refresh
+            </button>
+            <button class="btn btn-secondary" onclick="resetStats()">
+                🗑️ Reset Stats
+            </button>
+        </div>
+
+        <div class="loading-spinner" id="loadingSpinner"></div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="avgLatency">0ms</div>
+                <div class="stat-label">Average Latency</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="activeServers">0</div>
+                <div class="stat-label">Active Servers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalPings">0</div>
+                <div class="stat-label">Total Pings</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="alertCount">0</div>
+                <div class="stat-label">High Latency Alerts</div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="chart-container">
+                <h3 class="chart-title">📊 Latency Overview</h3>
+                <canvas id="latencyChart"></canvas>
+            </div>
+            
+            <div class="server-list">
+                <h3 class="chart-title">🌍 Server Status</h3>
+                <div id="serverList"></div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="chart-title">📈 Latency History</h3>
+            <canvas id="historyChart"></canvas>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+   
+</body>
+</html>
