@@ -1,0 +1,82 @@
+# 🌐 PingViz - Interactive Network Latency Dashboard
+
+A sleek, modern web dashboard for visualizing network latency across global servers. Built with vanilla JavaScript and Chart.js, featuring real-time monitoring, animated visualizations, and a sophisticated monochrome design.
+
+## ✨ Features
+
+- **Real-time Latency Monitoring** - Ping 8 global server endpoints with simulated network conditions
+- **Interactive Data Visualization** - Dynamic bar charts and historical line graphs
+- **Smart Status Indicators** - Color-coded performance levels with pulsing animations
+- **Auto-refresh Mode** - Continuous monitoring with 5-second intervals
+- **High Latency Alerts** - Automatic notifications for poor network performance
+- **Responsive Design** - Works seamlessly on desktop and mobile devices
+- **Professional Aesthetic** - Elegant black, white, and gray theme with glassmorphic effects
+
+## 🚀 Quick Start
+
+1. **Clone or Download** the HTML file
+2. **Open in Browser** - No build process required!
+3. **Click "Ping All Servers"** to start monitoring
+4. **Enable Auto-refresh** for continuous updates
+
+## 🎯 Demo Servers
+
+- **US East (Virginia)** - ~45ms baseline
+- **US West (California)** - ~85ms baseline  
+- **Europe (London)** - ~120ms baseline
+- **Asia Pacific (Tokyo)** - ~180ms baseline
+- **South America (São Paulo)** - ~200ms baseline
+- **Australia (Sydney)** - ~250ms baseline
+- **Canada (Central)** - ~65ms baseline
+- **Asia Pacific (Singapore)** - ~160ms baseline
+
+## 🛠️ Technology Stack
+
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript
+- **Charts**: Chart.js v3.9.1
+- **Animations**: CSS transforms and keyframes
+- **Design**: Glassmorphic UI with backdrop filters
+- **Responsive**: CSS Grid and Flexbox
+
+## 📊 Performance Metrics
+
+- **Excellent**: < 50ms (White indicators)
+- **Good**: 50-99ms (Light gray indicators)  
+- **Fair**: 100-199ms (Medium gray indicators)
+- **Poor**: 200ms+ (Dark gray indicators)
+
+## 🔧 Customization
+
+**Add New Servers:**
+```javascript
+const servers = [
+    { name: 'Custom Server', location: 'custom-1', flag: '🏴', baseLatency: 75 },
+    // ... existing servers
+];
+```
+
+**Modify Alert Threshold:**
+```javascript
+if (result.latency > 200) { // Change threshold here
+    showAlert(`High latency detected: ${result.name} (${result.latency}ms)`);
+}
+```
+
+## 📱 Browser Support
+
+- ✅ Chrome/Edge (recommended)
+- ✅ Firefox  
+- ✅ Safari
+- ✅ Mobile browsers
+
+## 🎨 Design Philosophy
+
+PingViz combines network engineering concepts with modern web design, creating a professional tool that showcases both technical knowledge and frontend development skills. The monochrome aesthetic provides a clean, enterprise-grade appearance suitable for network operations centers.
+
+## 📄 License
+
+Open source - feel free to use, modify, and distribute.
+
+---
+
+*Built for network engineers who appreciate beautiful data visualization* ⚡
